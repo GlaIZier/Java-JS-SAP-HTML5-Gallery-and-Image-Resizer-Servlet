@@ -1,0 +1,178 @@
+Development Component Build (2014-04-11 16:12:07 GMT+03:00 (MSD))
+  Component name: home/gallery/portal
+  Component vendor: rea.ru
+  SC compartment: rosenergoatom.ru_COMMON_1
+  Configuration: NWD_REAEP_D
+  Location: NWD_REAEP_D
+  Source code location: http://sapnwd:50000/dtr/ws/REAEP/rosenergoatom.ru_COMMON/dev/inactive/DCs/rea.ru/home/gallery/portal/_comp/
+  DC root folder: D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\DCs\rea.ru\home\gallery\portal\_comp\
+  DC type: Enterprise Portal
+  DC subtype: Portal Application Standalone
+  Host: MKhokhlushin
+
+DC Model check:
+   DC is available locally
+   validating dependency to build plugin "sap.com/tc/bi/bp/portalapplication"
+   validating dependency to  public part "default" of DC "sap.com/com.sapportals.htmlb"
+   validating dependency to  public part "api" of DC "sap.com/engine.j2ee14.facade"
+   validating dependency to  public part "default" of DC "sap.com/epbc.prtpars._htmlb"
+   WARNING: DC "rea.ru/home/gallery/portal (rosenergoatom.ru_COMMON_1)" depends on deprecated DC sap.com/epbc.prtpars._htmlb (sap.com_EP-BASIS_1) by using its public part default.
+   validating dependency to  public part "api" of DC "sap.com/tc/bl/logging/api"
+   validating dependency to  public part "api" of DC "sap.com/tc/epbc/prt/api"
+   validating dependency to  public part "api" of DC "sap.com/tc/epbc/prt/apps"
+   validating dependency to  public part "api" of DC "sap.com/tc/je/webservices/lib"
+   DC model check finished with warnings.
+
+Start build plugin:
+   using build plugin: sap.com/tc/bi/bp/portalapplication
+   starting build plugin from : D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\DCs\sap.com\tc\bi\bp\portalapplication\_comp\gen\default\public\def\
+
+
+
+Build Plugin 'PortalAppPlugin', Version 7.10 SP 5 (NW731EXT_10_REL, built on 2013-11-30 06:59:36 +0100, CL166629)
+   development component:  home/gallery/portal (rea.ru)
+      software component:  COMMON (rosenergoatom.ru)
+                location:  NWD_REAEP_D
+                    type:  Enterprise Portal, subtype Portal Application Standalone
+           build variant:  default
+         source location:  http://sapnwd:50000/dtr/ws/REAEP/rosenergoatom.ru_COMMON/dev/inactive/
+         output location:  D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\t2\92944CA697FA3B1F5F4560714588200D\default
+       generation folder:  D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\t\92944CA697FA3B1F5F4560714588200D
+       plugin start time:  2014-04-11 16:12:07 GMT+04:00 (MSD)
+                 Java VM:  Java HotSpot(TM) Client VM, 17.0-b17 (1.6, Sun Microsystems Inc.)
+
+
+General options:
+  convert *.xlf to *.properties: yes
+  include sources for debugging: yes
+ 
+
+
+Package folder "src.api" exists but is empty and will be ignored.
+Checking path lengths for sources
+Path length checks finished in 0.003 seconds
+ 
+Preparing data context..
+Data context preparation finished in 0.04 seconds
+ 
+Creating Ant build file..
+  Creating output file: D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\t2\92944CA697FA3B1F5F4560714588200D\default\logs\build.xml
+  Using macro file:     D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\DCs\sap.com\tc\bi\bp\portalapplication\_comp\gen\default\public\def\macros\build.vm
+DC specific options:
+  Portal Application file name:   rea.ru~home~gallery~portal.war
+  Include sources in application: no
+  Deploy type:                    online
+  Use WebContainer:               true
+
+
+Build file creation finished in 0.162 seconds
+ 
+Starting Ant..
+  Using build file:     D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\t2\92944CA697FA3B1F5F4560714588200D\default\logs\build.xml
+  Using build target:   build
+  Using Ant version:    1.7.1
+ 
+compile:
+      [echo] Starting Java compiler using the current JVM
+      [echo] Settings:
+      [echo]         debug: on
+      [echo]      optimize: off
+      [echo]   deprecation: default
+      [echo]       verbose: default
+      [echo]      encoding: UTF-8
+      [echo]        source: 1.6
+      [echo]        target: 1.6
+      [echo]   source path: D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\DCs\rea.ru\home\gallery\portal\_comp\src.core
+      [echo]    class path:
+      [echo]       D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\DCs\sap.com\tc\epbc\prt\api\_comp\gen\default\public\api\lib\java\tc~epbc~prt~api.jar
+      [echo]       D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\DCs\sap.com\tc\je\webservices\lib\_comp\gen\default\public\api\lib\java\tc~je~webservices~lib.jar
+      [echo]       D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\DCs\sap.com\com.sapportals.htmlb\_comp\gen\default\public\default\lib\java\com.sapportals.htmlb.jar
+      [echo]       D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\DCs\sap.com\tc\epbc\prt\apps\_comp\gen\default\public\api\lib\java\com.sap.portal.prt.connection.public.jar
+      [echo]       D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\DCs\sap.com\tc\epbc\prt\apps\_comp\gen\default\public\api\lib\java\com.sap.portal.runtime.application.contentconversion.jar
+      [echo]       D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\DCs\sap.com\tc\epbc\prt\apps\_comp\gen\default\public\api\lib\java\com.sap.portal.runtime.application.document.jar
+      [echo]       D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\DCs\sap.com\tc\epbc\prt\apps\_comp\gen\default\public\api\lib\java\com.sap.portal.runtime.system.clusterinformation.jar
+      [echo]       D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\DCs\sap.com\tc\epbc\prt\apps\_comp\gen\default\public\api\lib\java\com.sap.portal.runtime.system.hooks.jar
+      [echo]       D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\DCs\sap.com\tc\epbc\prt\apps\_comp\gen\default\public\api\lib\java\com.sap.portal.supportability.isolde.api.jar
+      [echo]       D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\DCs\sap.com\tc\epbc\prt\apps\_comp\gen\default\public\api\lib\java\tc~epbc~prt~apps.jar
+      [echo]       D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\DCs\sap.com\tc\bl\logging\api\_comp\gen\default\public\api\lib\java\tc~bl~logging~api~defaultttt.jar
+      [echo]       D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\DCs\sap.com\engine.j2ee14.facade\_comp\gen\default\public\api\lib\java\engine.j2ee14.facade.jar
+      [echo]       D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\DCs\sap.com\epbc.prtpars._htmlb\_comp\gen\default\public\default\lib\java\com.sap.portal.htmlb.jar
+      [echo]       D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\DCs\sap.com\epbc.prtpars._htmlb\_comp\gen\default\public\default\lib\java\tc~htmlb~htmlb_api.jar
+      [echo]    output dir: D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\t\92944CA697FA3B1F5F4560714588200D\classes
+     [javac] Compiling 2 source files to D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\t\92944CA697FA3B1F5F4560714588200D\classes
+     [timer] Java compilation finished in 0.112 seconds
+ 
+      [echo] Start XLF conversion
+  [xlf2prop] Found 0 XLF files to convert in folder "src.core"
+     [timer] XLF conversion finished in 0.001 seconds
+ 
+  [pppacker] Could not determine correct package of package folder for entity  (portalapplication-api/Class, src.api/)
+  [pppacker] Packed   0 files for entity  (portalapplication-api/Class, src.api/)
+  [pppacker] Packed   5 files for entity  (portalapplication-core/Class, src.core/)
+     [timer] Portal Application libraries packaging finished in 0.028 seconds
+ 
+ 
+createApplication:
+      [echo] create PAR..
+      [copy] Copying 2 files to D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\t\92944CA697FA3B1F5F4560714588200D\PAR\WEB-INF
+      [copy] Copied 10 empty directories to 9 empty directories under D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\t\92944CA697FA3B1F5F4560714588200D\PAR\WEB-INF
+       [jar] Building jar: D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\t\92944CA697FA3B1F5F4560714588200D\rea.ru~home~gallery~portal.war
+ 
+createPublicParts:
+  [pppacker] Packing public part 'API'
+  [pppacker] Packed   0 files for entity Portal API (Portal API)
+  [pppacker] Packed 1 entity for public part 'API'
+     [timer] Public part packaging finished in 0.012 seconds
+ 
+ 
+createDeployArchive:
+      [echo] Creating portalapp-dd.xml
+       [cda] Preparing archive for deploy unit "default"
+       [cda]   deployment type: "J2EE"
+       [cda]   explicit modules:
+       [cda]     D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\t\92944CA697FA3B1F5F4560714588200D\rea.ru~home~gallery~portal.war
+       [cda]   deploy options:
+       [cda]     update-descriptors = true
+ 
+       [cda] Creating Ant build file: D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\t2\92944CA697FA3B1F5F4560714588200D\default\logs\buildDeployArchive.xml
+ 
+ 
+       [cda] Validating descriptor D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\t\92944CA697FA3B1F5F4560714588200D\application-j2ee-engine.xml
+ 
+       [cda] Creating descriptor META-INF/application.xml ...
+ 
+       [cda] Collecting modules ...
+       [cda] Adding module 'rea.ru~home~gallery~portal.war' from current development component
+       [cda] Ant build file creation finished in 0.031 seconds
+ 
+packDeployArchive:
+ [srcpacker] Creating source archive
+ [srcpacker] No sources available for packing, no archive will be created.
+     [timer] Source archive creation finished in 0.011 seconds
+ 
+    [jarsap] Info: JarSAP version 20090803.1000
+    [jarsap] Info: JarSAPProcessing version 20090907.1000 / JarSL version 20100616.1800
+    [jarsap] Building: D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\t2\92944CA697FA3B1F5F4560714588200D\default\deploy\rea.ru~home~gallery~portal.sda with compression
+     [timer] JarSAP finished in 0.011 seconds
+ 
+ 
+build:
+ 
+Ant runtime 0.336 seconds
+ 
+Ant build finished OK
+Checking package reservation
+Package ru.rea.gallery is not reserved for DC : home/gallery/portal.
+Package reservation check finished in 0.001 seconds
+ 
+Build plugin finished at 2014-04-11 16:12:08 GMT+04:00 (MSD)
+Total build plugin runtime: 0.721 seconds
+ 
+Build finished with WARNING
+
+==== Post-Processing ====   started at 2014-04-11 16:12:08.629 MSD
+Comparison of previous and actual build results took: 0.002 seconds
+
+Copy the build results 
+  from: D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\t2\92944CA697FA3B1F5F4560714588200D\default\
+  to:   D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\DCs\rea.ru\home\gallery\portal\_comp\gen\default\

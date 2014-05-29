@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    development component
+                     name: home/gallery/portal
+                   vendor: rea.ru
+                     type: Enterprise Portal
+                 sub-type: Portal Application Standalone
+              type-vendor: sap.com
+
+       software component
+                     name: COMMON
+                   vendor: rosenergoatom.ru
+
+                 location: NWD_REAEP_D
+          source location: http://sapnwd:50000/dtr/ws/REAEP/rosenergoatom.ru_COMMON/dev/inactive/
+            build variant: default
+
+    building on MKhokhlushin, Windows 7/x86, version 6.1
+    using Java VM 'Java HotSpot(TM) Client VM', version 17.0-b17 (Sun Microsystems Inc.)
+    build started at 2014-04-11 16:12:08 GMT+04:00 (MSD)
+
+    Build Plugin 'PortalAppPlugin', Version 7.10 SP 5 (NW731EXT_10_REL, built on 2013-11-30 06:59:36 +0100, CL166629)
+    detailed versions:
+    sap.com:tc/bi/anttasks#def             7.30 SP 5 (NW731CORE_10_REL, built on 2013-11-30 00:01:09 +0100, CL166627)
+    sap.com:tc/bi/bp/portalapplication#def 7.10 SP 5 (NW731EXT_10_REL, built on 2013-11-30 06:59:36 +0100, CL166629)
+    sap.com:tc/bi/core#def                 7.30 SP 5 (NW731CORE_10_REL, built on 2013-11-30 00:02:37 +0100, CL166627)
+    sap.com:tc/bi/eptech#def               7.10 SP 5 (NW731EXT_10_REL, built on 2013-11-30 06:59:40 +0100, CL166629)
+    sap.com:tc/bi/exception#def            7.30 SP 5 (NW731CORE_10_REL, built on 2013-11-30 00:01:08 +0100, CL166627)
+    sap.com:tc/bi/extddicdb#def            7.30 SP 5 (NW731CORE_10_REL, built on 2013-11-30 00:01:14 +0100, CL166627)
+    sap.com:tc/bi/extpcd#def               7.10 SP 5 (NW731EXT_10_REL, built on 2013-11-30 06:59:34 +0100, CL166629)
+    sap.com:tc/bi/extsql#def               7.30 SP 5 (NW731CORE_10_REL, built on 2013-11-30 00:01:11 +0100, CL166627)
+    sap.com:tc/bi/framework#def            7.30 SP 5 (NW731CORE_10_REL, built on 2013-11-29 23:58:29 +0100, CL166627)
+    sap.com:tc/bi/i18n#def                 7.30 SP 5 (NW731CORE_10_REL, built on 2013-11-30 00:01:05 +0100, CL166627)
+    sap.com:tc/bi/javatech#def             7.30 SP 5 (NW731CORE_10_REL, built on 2013-11-29 23:59:03 +0100, CL166627)
+    sap.com:tc/bi/jdoc#def                 7.30 SP 5 (NW731CORE_10_REL, built on 2013-11-30 00:01:09 +0100, CL166627)
+    sap.com:tc/bi/jdoc/util#def            7.30 SP 5 (NW731CORE_10_REL, built on 2013-11-29 23:58:54 +0100, CL166627)
+    sap.com:tc/bi/jlincbs#def              7.30 SP 5 (NW731CORE_10_REL, built on 2013-11-30 00:01:23 +0100, CL166627)
+    sap.com:tc/bi/settings#version         7.30 SP 5 (NW731CORE_10_REL, built on 2013-11-29 23:59:51 +0100, CL166627)
+    sap.com:tc/bi/util#util                7.30 SP 5 (NW731CORE_10_REL, built on 2013-11-29 23:58:41 +0100, CL166627)
+    sap.com:tc/bi/velocity#def             7.30 SP 5 (NW731CORE_10_REL, built on 2013-11-30 00:01:04 +0100, CL166627)
+    sap.com:tc/bi/xml#def                  7.30 SP 5 (NW731CORE_10_REL, built on 2013-11-30 00:01:05 +0100, CL166627)
+ -->
+<project name="DC Build"
+         default="build"
+         basedir=".">
+<taskdef name="cda" classname="com.sap.tc.buildplugin.deploy.DeployArchiveTask"/>
+<taskdef name="checkfileset" classname="com.sap.tools.ant.taskdefs.EmptyFilesetCheck"/>
+<taskdef name="createappj2ee" classname="com.sap.tools.ant.taskdefs.ApplicationJ2EEEngineTask"/>
+<taskdef name="pppacker" classname="com.sap.tc.buildplugin.pp.PPPackTask"/>
+<taskdef name="propertybag" classname="com.sap.tools.ant.taskdefs.PropertyBag"/>
+<taskdef name="sdadd" classname="com.sap.tools.ant.taskdefs.SdaDDTask"/>
+<taskdef name="timer" classname="com.sap.tools.ant.taskdefs.Timer"/>
+<taskdef name="xlf2prop" classname="com.sap.tc.buildplugin.util.XlfConverter"/>
+<!-- DC properties: -->
+            <!-- Name: localization , ns: http://xml.sap.com/2003/06/Localization , value:  -->
+            <!-- Name: package-sources , ns: http://xml.sap.com/2004/06/PortalPlatform , value: false -->
+            <!-- Name: par-archive-name , ns: http://xml.sap.com/2004/06/PortalPlatform , value: rea.ru~home~gallery~portal -->
+                <!-- portal properties: {par-archive-name=rea.ru~home~gallery~portal, package-sources=false} -->
+
+<target name="compile">
+<mkdir dir="D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\t\92944CA697FA3B1F5F4560714588200D\classes"/>
+<!-- begin generator extension type 'sap.com~sqlj' for generator id 'sap.com~javac' -->
+<!-- No *.sqlj files found, skipping SQLJ preprocessing. -->
+<!-- end generator extension type 'sap.com~sqlj' for generator id 'sap.com~javac' -->
+<!-- begin generator id 'sap.com~javac', type 'sap.com~javac' -->
+<echo message="Starting Java compiler using the current JVM"/>
+<timer/>
+<echo message="Settings:"/>
+<echo message="        debug: on"/>
+<echo message="     optimize: off"/>
+<echo message="  deprecation: default"/>
+<echo message="      verbose: default"/>
+<echo message="     encoding: UTF-8"/>
+<echo message="       source: 1.6"/>
+<echo message="       target: 1.6"/>
+<echo message="  source path: D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\DCs\rea.ru\home\gallery\portal\_comp\src.core"/>
+<echo message="   class path:"/>
+<echo message="      D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\DCs\sap.com\tc\epbc\prt\api\_comp\gen\default\public\api\lib\java\tc~epbc~prt~api.jar"/>
+<echo message="      D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\DCs\sap.com\tc\je\webservices\lib\_comp\gen\default\public\api\lib\java\tc~je~webservices~lib.jar"/>
+<echo message="      D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\DCs\sap.com\com.sapportals.htmlb\_comp\gen\default\public\default\lib\java\com.sapportals.htmlb.jar"/>
+<echo message="      D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\DCs\sap.com\tc\epbc\prt\apps\_comp\gen\default\public\api\lib\java\com.sap.portal.prt.connection.public.jar"/>
+<echo message="      D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\DCs\sap.com\tc\epbc\prt\apps\_comp\gen\default\public\api\lib\java\com.sap.portal.runtime.application.contentconversion.jar"/>
+<echo message="      D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\DCs\sap.com\tc\epbc\prt\apps\_comp\gen\default\public\api\lib\java\com.sap.portal.runtime.application.document.jar"/>
+<echo message="      D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\DCs\sap.com\tc\epbc\prt\apps\_comp\gen\default\public\api\lib\java\com.sap.portal.runtime.system.clusterinformation.jar"/>
+<echo message="      D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\DCs\sap.com\tc\epbc\prt\apps\_comp\gen\default\public\api\lib\java\com.sap.portal.runtime.system.hooks.jar"/>
+<echo message="      D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\DCs\sap.com\tc\epbc\prt\apps\_comp\gen\default\public\api\lib\java\com.sap.portal.supportability.isolde.api.jar"/>
+<echo message="      D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\DCs\sap.com\tc\epbc\prt\apps\_comp\gen\default\public\api\lib\java\tc~epbc~prt~apps.jar"/>
+<echo message="      D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\DCs\sap.com\tc\bl\logging\api\_comp\gen\default\public\api\lib\java\tc~bl~logging~api~defaultttt.jar"/>
+<echo message="      D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\DCs\sap.com\engine.j2ee14.facade\_comp\gen\default\public\api\lib\java\engine.j2ee14.facade.jar"/>
+<echo message="      D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\DCs\sap.com\epbc.prtpars._htmlb\_comp\gen\default\public\default\lib\java\com.sap.portal.htmlb.jar"/>
+<echo message="      D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\DCs\sap.com\epbc.prtpars._htmlb\_comp\gen\default\public\default\lib\java\tc~htmlb~htmlb_api.jar"/>
+<echo message="   output dir: D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\t\92944CA697FA3B1F5F4560714588200D\classes"/>
+<checkfileset fail="false">
+<fileset dir="D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\DCs\rea.ru\home\gallery\portal\_comp\src.core">
+<include name="**/*.class"/>
+</fileset>
+</checkfileset>
+<javac includeAntRuntime="no"
+       destdir="D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\t\92944CA697FA3B1F5F4560714588200D\classes"
+       encoding="UTF-8"
+       deprecation="false"
+       debug="on"
+       target="1.6"
+       source="1.6"
+       tempdir="D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\t\92944CA697FA3B1F5F4560714588200D">
+<src path="D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\DCs\rea.ru\home\gallery\portal\_comp\src.core"/>
+<include name="**/*.java"/>
+<classpath>
+<pathelement location="D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\DCs\sap.com\tc\epbc\prt\api\_comp\gen\default\public\api\lib\java\tc~epbc~prt~api.jar"/>
+<pathelement location="D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\DCs\sap.com\tc\je\webservices\lib\_comp\gen\default\public\api\lib\java\tc~je~webservices~lib.jar"/>
+<pathelement location="D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\DCs\sap.com\com.sapportals.htmlb\_comp\gen\default\public\default\lib\java\com.sapportals.htmlb.jar"/>
+<pathelement location="D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\DCs\sap.com\tc\epbc\prt\apps\_comp\gen\default\public\api\lib\java\com.sap.portal.prt.connection.public.jar"/>
+<pathelement location="D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\DCs\sap.com\tc\epbc\prt\apps\_comp\gen\default\public\api\lib\java\com.sap.portal.runtime.application.contentconversion.jar"/>
+<pathelement location="D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\DCs\sap.com\tc\epbc\prt\apps\_comp\gen\default\public\api\lib\java\com.sap.portal.runtime.application.document.jar"/>
+<pathelement location="D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\DCs\sap.com\tc\epbc\prt\apps\_comp\gen\default\public\api\lib\java\com.sap.portal.runtime.system.clusterinformation.jar"/>
+<pathelement location="D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\DCs\sap.com\tc\epbc\prt\apps\_comp\gen\default\public\api\lib\java\com.sap.portal.runtime.system.hooks.jar"/>
+<pathelement location="D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\DCs\sap.com\tc\epbc\prt\apps\_comp\gen\default\public\api\lib\java\com.sap.portal.supportability.isolde.api.jar"/>
+<pathelement location="D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\DCs\sap.com\tc\epbc\prt\apps\_comp\gen\default\public\api\lib\java\tc~epbc~prt~apps.jar"/>
+<pathelement location="D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\DCs\sap.com\tc\bl\logging\api\_comp\gen\default\public\api\lib\java\tc~bl~logging~api~defaultttt.jar"/>
+<pathelement location="D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\DCs\sap.com\engine.j2ee14.facade\_comp\gen\default\public\api\lib\java\engine.j2ee14.facade.jar"/>
+<pathelement location="D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\DCs\sap.com\epbc.prtpars._htmlb\_comp\gen\default\public\default\lib\java\com.sap.portal.htmlb.jar"/>
+<pathelement location="D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\DCs\sap.com\epbc.prtpars._htmlb\_comp\gen\default\public\default\lib\java\tc~htmlb~htmlb_api.jar"/>
+</classpath>
+</javac>
+<timer message="Java compilation finished in "/>
+<!-- end generator id 'sap.com~javac', type 'sap.com~javac' -->
+<!-- begin generator extension type 'sap.com~jlin' for generator id 'sap.com~javac' -->
+<!-- JLin disabled. -->
+<!-- end generator extension type 'sap.com~jlin' for generator id 'sap.com~javac' -->
+<!-- begin generator extension type 'sap.com~sqlj' for generator id 'sap.com~javac' -->
+<!-- No *.sqlj files found, skipping SQLJ post-processing. -->
+<!-- end generator extension type 'sap.com~sqlj' for generator id 'sap.com~javac' -->
+<!-- begin generator extension type 'sap.com~jdo' for generator id 'sap.com~javac' -->
+<!-- No *.jdo files found, skipping JDO enhancer. -->
+<!-- end generator extension type 'sap.com~jdo' for generator id 'sap.com~javac' -->
+<!-- begin generator extension type 'sap.com~xlf2prop' for generator id 'sap.com~javac' -->
+<echo message="Start XLF conversion"/>
+<timer/>
+<xlf2prop todir="D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\t\92944CA697FA3B1F5F4560714588200D\classes">
+<fileset dir="D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\DCs\rea.ru\home\gallery\portal\_comp\src.core"/>
+</xlf2prop>
+<timer message="XLF conversion finished in "/>
+<!-- end generator extension type 'sap.com~xlf2prop' for generator id 'sap.com~javac' -->
+<!-- begin generator extension type 'sap.com~jdoc' for generator id 'sap.com~javac' -->
+<!-- Javadoc generation disabled. -->
+<!-- end generator extension type 'sap.com~jdoc' for generator id 'sap.com~javac' -->
+
+            
+                	<mkdir dir="D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\t\92944CA697FA3B1F5F4560714588200D\PAR"/>
+                <timer/>
+<pppacker ppname="Portal Application libraries"
+          internal="true"
+          purpose="intermediate"
+          root="D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\t\92944CA697FA3B1F5F4560714588200D\PAR">
+            <packer location="lib.api" type="jar">
+            <property key="path" value="WEB-INF/lib/api.jar"/>
+            <property key="manifest" value="D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\t\92944CA697FA3B1F5F4560714588200D\MANIFEST.MF"/>
+            </packer>
+            <packer location="lib.core" type="jar">
+            <property key="path" value="WEB-INF/private/lib/core.jar"/>
+            <property key="manifest" value="D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\t\92944CA697FA3B1F5F4560714588200D\MANIFEST.MF"/>
+            </packer>
+    	        	    
+            <entityhandler classname="com.sap.tc.buildplugin.pp.entity.EHAbsoluteJavaPackageTree">
+                <entitytype type="portalapplication-api" subtype="Class"/>
+        		                <property key="class-destination"  value="lib.api"/>
+            </entityhandler>
+
+            <entityhandler classname="com.sap.tc.buildplugin.pp.entity.EHAbsoluteJavaPackageTree">
+                <entitytype type="portalapplication-core" subtype="Class"/>
+        		                <property key="class-destination"  value="lib.core"/>
+            </entityhandler>
+
+            <entity type="portalapplication-api"  subtype="Class" package="src.api"/>
+            <entity type="portalapplication-core" subtype="Class" package="src.core"/>
+            </pppacker>
+<timer message="Portal Application libraries packaging finished in "/>
+</target>
+
+<target name="createApplication" depends="compile">
+<echo message="create PAR.."/>
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          	<mkdir dir="D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\t\92944CA697FA3B1F5F4560714588200D\PAR/WEB-INF"/>
+            <echo file="D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\t\92944CA697FA3B1F5F4560714588200D\PAR/WEB-INF/web.xml" append="false"><![CDATA[<?xml version="1.0" ?>
+<web-app>
+     <description></description>
+     <display-name>rea.ru~home~gallery~portal</display-name>
+     <session-config>
+         <session-timeout>15</session-timeout>
+     </session-config>
+</web-app>
+]]></echo>
+                    		    		        <copy todir="D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\t\92944CA697FA3B1F5F4560714588200D\PAR/WEB-INF/">
+                    <fileset dir="D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\DCs\rea.ru\home\gallery\portal\_comp//dist/PORTAL-INF"/>
+		        </copy>
+					                  	<jar jarfile="D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\t\92944CA697FA3B1F5F4560714588200D/rea.ru~home~gallery~portal.war" manifest="D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\t\92944CA697FA3B1F5F4560714588200D\MANIFEST.MF" duplicate="preserve">
+		                <fileset dir="D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\DCs\rea.ru\home\gallery\portal\_comp//dist">
+                <include name="**" />
+                                    <exclude name="PORTAL-INF/**/*"/>
+                    <exclude name="PORTAL-INF"/>
+                            </fileset>
+					                <fileset dir="D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\t\92944CA697FA3B1F5F4560714588200D\PAR">
+                <include name="WEB-INF/**" />
+            </fileset>
+            </jar>
+</target>
+
+<target name="createPublicParts" depends="createApplication">
+<timer/>
+<pppacker ppname="API">
+
+                <packer location="par" type="filesystem">
+                    <property key="attributes" value="J2EE-Module[module-type[web]],content-root[rea.ru~home~gallery~portal]"/>
+                </packer>
+                <entityhandler classname="com.sap.tc.buildplugin.pp.entity.EHDeployArchive">
+                    <entitytype type="PAR"/>
+                    <property key="packer-location" value="par"/>
+                    <property key="path" value="portal/rea.ru~home~gallery~portal.war"/>
+                    <property key="file" value="D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\t\92944CA697FA3B1F5F4560714588200D/rea.ru~home~gallery~portal.war"/>
+                </entityhandler>
+                                </pppacker>
+<timer message="Public part packaging finished in "/>
+</target>
+
+<target name="createDeployArchive" depends="createPublicParts">
+<echo message="Creating portalapp-dd.xml"/>
+                                <sdadd file="D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\t\92944CA697FA3B1F5F4560714588200D/sda-dd.xml"
+       softwaretype="J2EE"
+       descriptortype="engine">
+<SubstitutionVariable name="com.sap.sld.GatewayHost"/>
+<SubstitutionVariable name="com.sap.sld.GatewayService"/>
+</sdadd>
+
+            
+            
+            
+            <createappj2ee file="D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\t\92944CA697FA3B1F5F4560714588200D/application-j2ee-engine.xml" providername="rea.ru" startupmode="always"/>
+                                                    <cda type="sap.com~j2ee.EAR_SDA" deployfile="D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\t2\92944CA697FA3B1F5F4560714588200D\default\deploy/rea.ru~home~gallery~portal.sda">
+<descriptor type="sda-deployment-descriptor" file="D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\t\92944CA697FA3B1F5F4560714588200D/sda-dd.xml"/>
+
+                <option key="update-descriptors" value="true"/>
+                <descriptor file="D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\t\92944CA697FA3B1F5F4560714588200D/application-j2ee-engine.xml" type="application-j2ee-engine.xml" destpath="META-INF/application-j2ee-engine.xml"/>
+                <module file="D:\Work IBS\Work Spaces\NWDS Work Space.jdi\1\t\92944CA697FA3B1F5F4560714588200D/rea.ru~home~gallery~portal.war" attributes="J2EE-Module[module-type[web]],content-root[rea.ru~home~gallery~portal]"/>
+                                                                    </cda>
+</target>
+
+<target name="build" depends="compile,createApplication,createPublicParts,createDeployArchive">
+
+</target>
+</project>

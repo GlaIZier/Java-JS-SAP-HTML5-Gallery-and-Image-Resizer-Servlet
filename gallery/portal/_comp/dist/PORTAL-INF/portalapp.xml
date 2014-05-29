@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<application>
+  <application-config>
+    <property name="SharingReference" value="com.sap.portal.htmlb, usermanagement, knowledgemanagement"/>
+  </application-config>
+  <components>
+    <component name="Gallery">
+      <component-config>
+        <property name="ClassName" value="ru.rea.gallery.Gallery"/>
+        <property name="SecurityZone" value="ru.rea.gallery/low_safety"/>
+      </component-config>
+      <component-profile>
+        <property name="htmlb" value="/SERVICE/htmlb/taglib/htmlb.tld"/>
+        <property name="displayMode" value="1"/>
+        <property name="com.sap.portal.prt.html5.compliant" value="true"/>
+        <property name="displayMode" value="Fullscreen">
+        	<property name="category" value="Administration"/>
+    		<property name="type" value="select[Fullscreen,Preview]"/>
+    		<property name="personalization" value="dialog"/>
+    		<property name="plainDescription" value="Gallery display mode"/>
+  		</property>
+        <property name="shortFolderURL" value="documents/Temp/photo-video/">
+          <property name="category" value="Administration"/>
+          <property name="personalization" value="dialog"/>
+          <property name="type" value="String"/>
+          <property name="plainDescription" value="KM gallery folder URL"/>
+        </property>
+        <property name="imageResizerURL" value="irj/servlet/prt/portal/prtroot/rea.ru~home~gallery~portal.ImageResizer">
+          <property name="category" value="Administration"/>
+          <property name="personalization" value="dialog"/>
+          <property name="type" value="String"/>
+          <property name="plainDescription" value="URL to image resizer servlet for thumbnails"/>
+        </property>
+        <property name="filter" value="">
+          <property name="category" value="Administration"/>
+          <property name="personalization" value="none"/>
+          <property name="type" value="String"/>
+          <property name="plainDescription" value="Filter. Separator: ','."/>
+        </property>
+      </component-profile>
+    </component>
+    <component name="ImageResizer">
+      <component-config>
+        <property name="ClassName" value="ru.rea.gallery.ImageResizer"/>
+      </component-config>
+      <component-profile/>
+    </component>
+  </components>
+  <services/>
+</application>

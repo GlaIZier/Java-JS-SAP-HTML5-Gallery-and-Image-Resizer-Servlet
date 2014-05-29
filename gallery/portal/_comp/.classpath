@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="var" path="JRE_LIB" rootpath="JRE_SRCROOT" sourcepath="JRE_SRC"/>
+	<classpathentry kind="src" path="src.api"/>
+	<classpathentry kind="src" path="src.core"/>
+	<classpathentry kind="con" path="com.sap.ide.dii.jdt.requiredDcs"/>
+	<classpathentry kind="var" path="SAP_EP/resources/servlet.jar"/>
+	<classpathentry kind="output" path="test"/>
+</classpath>
